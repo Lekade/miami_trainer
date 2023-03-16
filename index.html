@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тренер Майами</title>
+	<link rel="icon" href="images/favicon.svg" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<a href="" class="header__logo">
+					<img class="header__logo-img" src="images/logo.svg" alt="" >
+				</a>
+				<div class="header__info">
+					<a href="#" target="_blank" class="header__whatsapp">
+						<img class="header__whatsapp-img" src="images/whatsapp.svg" alt="whatsapp">
+						<div class="header__whatsapp-text">Задайте вопрос,
+						я онлайн</div>
+					</a>
+					<div class="header__whatsapp-info">Среднее время
+					ответа: 25 секунд</div>
+					<div class="header__phone">
+						<div class="header__phone-time">На связи: 10:00 - 24:00</div>
+						<a href="tel:+17542099907" class="header__phone-number">+1 (754) 209-9907</a>
+						<button class="header__phone-btn btnPopup">Заказать консультацию</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<section class="intro">
+				<div class="container">
+					<div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="intro__body">
+						<div  class="intro__title">Персональные тренировки 
+						в Майами с Чемпионом Мира и Европы по фитнесу
+						Алексеем Горишным </div>
+						<div class="intro__subtitle">Доведу за руку до результата благодаря комплексному подходу: МОТИВАЦИЯ + СПОРТ + ПИТАНИЕ</div>
+						<div class="intro__text">Отвечу на все ваши вопросы и расскажу, как получить тренировку <span>стоимостью 200$ в подарок</span> </div>
+						<button class="btn intro__btn btnPopup">Получить  консультацию</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="quiz">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section quiz__h2-section">Получите личную консультацию с ответами 
+					на ваши вопросы от Алексея</h2>
+					<h3 data-aos="fade-up" class="h3-section quiz__h3-section">пройдя небольшой тест за 1 минуту</h3>
+					<div class="quiz__body" id="quiz">
+						<form>
+							<div class="quiz__form active_01">
+								<div class="quiz__progress">
+									<div class="quiz__progress-line"></div>
+									<div class="quiz__progress-text">Шаг <span class="progress-number">1</span> из 6</div>
+								</div>
+								<div class="quizItems">
+
+									<div class="quizItem quizItem__01">
+										<div class="quiz__question">
+											<div class="quiz__question-number">Вопрос 1</div>
+											<div class="quiz__question-text">Вы?</div>
+											<div class="quiz__question-info">Отвечайте на вопросы, чтобы я мог точнее понять ваши ходные данные и дать экспертные ответы на все ваши вопросы.</div>
+										</div>
+										<div class="answers">
+										<label>
+											<div class="answer answer__1">
+												<input class="q1inp" type="radio" name="question_1" value="Мужчина">
+											</div>
+											<div class="quiz__answer-text">Мужчина</div>
+										</label>
+
+										<label>
+											<div class="answer answer__2">
+												<input class="q1inp" type="radio" name="question_1" value="Женщина">
+											</div>
+											<div class="quiz__answer-text">Женщина</div>
+										</label>
+										</div>
+									</div>
+
+									<div class="quizItem quizItem__02">
+										<div class="quiz__question">
+											<div class="quiz__question-number">Вопрос 2</div>
+											<div class="quiz__question-text">Какие у вас цели?</div>
+											<div class="quiz__question-info">Отвечайте на вопросы, чтобы я мог точнее понять ваши ходные данные и дать экспертные ответы на все ваши вопросы.</div>
+										</div>
+										<div class="answers">
+										<label>
+											<div class="answer answer__1">
+												<input class="q2inp" type="checkbox" name="question_2" value="Хочу похудеть">
+											</div>
+											<div class="quiz__answer-text">Хочу похудеть</div>
+										</label>
+
+										<label>
+											<div class="answer answer__2">
+												<input class="q2inp" type="checkbox" name="question_2" value="Хочу набртаь мышечную массу">
+											</div>
+											<div class="quiz__answer-text">Хочу набртаь мышечную массу
+											</div>
+										</label>
+
+										<label>
+											<div class="answer answer__3">
+												<input class="q2inp" type="checkbox" name="question_2" value="Хочу поддерживать общую физическую форму и здоровье">
+											</div>
+											<div class="quiz__answer-text">Хочу поддерживать общую физическую форму и здоровье</div>
+										</label>
+
+										<label>
+											<div class="answer answer__4">
+												<input class="q2inp" type="checkbox" name="question_2" value="Развить определенные группы мышц">
+											</div>
+											<div class="quiz__answer-text">Развить определенные группы мышц</div>
+										</label>
+
+										<label>
+											<div class="answer answer__5">
+												<input class="q2inp" type="checkbox" name="question_2" value="Другие цели">
+											</div>
+											<div class="quiz__answer-text">Другие цели</div>
+										</label>
+
+										</div>
+									</div>
+
+									<div class="quizItem quizItem__03">
+										<div class="quiz__question">
+											<div class="quiz__question-number">Вопрос 3</div>
+											<div class="quiz__question-text">Как вы оцениваете уровнь своей физической подготовки?</div>
+											<div class="quiz__question-info">Отвечайте на вопросы, чтобы я мог точнее понять ваши ходные данные и дать экспертные ответы на все ваши вопросы.</div>
+										</div>
+										<div class="answers">
+										<label>
+											<div class="answer answer__1">
+												<input class="q3inp" type="radio" name="question_3" value="Низкий уровень: я почти не занимаюсь физическими упражнениями">
+											</div>
+											<div class="quiz__answer-text">Низкий уровень: я почти не занимаюсь физическими упражнениями</div>
+										</label>
+
+										<label>
+											<div class="answer answer__2">
+												<input class="q3inp" type="radio" name="question_3" value="Средний уровень: я иногда занимаюсь физическими упражнениями">
+											</div>
+											<div class="quiz__answer-text">Средний уровень: я иногда занимаюсь физическими упражнениями</div>
+										</label>
+
+										<label>
+											<div class="answer answer__3">
+												<input class="q3inp" type="radio" name="question_3" value="Хороший уровень: я занимаюсь физическими упражнениями несколько раз в неделю">
+											</div>
+											<div class="quiz__answer-text">Хороший уровень: я занимаюсь физическими упражнениями несколько раз в неделю</div>
+										</label>
+
+										<label>
+											<div class="answer answer__4">
+												<input class="q3inp" type="radio" name="question_3" value="Отличный уровень: я регулярно занимаюсь физическими упражнениями ">
+											</div>
+											<div class="quiz__answer-text">Отличный уровень: я регулярно занимаюсь физическими упражнениями</div>
+										</label>
+
+										</div>
+									</div>
+
+									<div class="quizItem quizItem__04">
+										<div class="quiz__question">
+											<div class="quiz__question-number">Вопрос 4</div>
+											<div class="quiz__question-text">Как часто вы хотели бы тренироваться ?</div>
+											<div class="quiz__question-info">Отвечайте на вопросы, чтобы я мог точнее понять ваши ходные данные и дать экспертные ответы на все ваши вопросы.</div>
+										</div>
+										<div class="answers">
+										<label>
+											<div class="answer answer__1">
+												<input class="q4inp" type="radio" name="question_4" value="1- 2 раза в неделю">
+											</div>
+											<div class="quiz__answer-text">1- 2 раза в неделю</div>
+										</label>
+
+										<label>
+											<div class="answer answer__2">
+												<input class="q4inp" type="radio" name="question_4" value="2-3 раза в неделю">
+											</div>
+											<div class="quiz__answer-text">2-3 раза в неделю</div>
+										</label>
+
+										<label>
+											<div class="answer answer__3">
+												<input class="q4inp" type="radio" name="question_4" value="3-4 раза в неделю">
+											</div>
+											<div class="quiz__answer-text">13-4 раза в неделю</div>
+										</label>
+
+										<label>
+											<div class="answer answer__4">
+												<input class="q4inp" type="radio" name="question_4" value="более 4 раз в неделю">
+											</div>
+											<div class="quiz__answer-text">более 4 раз в неделю</div>
+										</label>
+
+										<label>
+											<div class="answer answer__5">
+												<input class="q4inp" type="radio" name="question_4" value="Нет уверенности, хочу обсудить это с тренером ">
+											</div>
+											<div class="quiz__answer-text">Нет уверенности, хочу обсудить это с тренером </div>
+										</label>
+
+
+
+										</div>
+									</div>
+
+									<div class="quizItem quizItem__05">
+										<div class="quiz__question">
+											<div class="quiz__question-number">Вопрос 5</div>
+											<div class="quiz__question-text">Где вы планируете заниматься ?</div>
+											<div class="quiz__question-info">Отвечайте на вопросы, чтобы я мог точнее понять ваши ходные данные и дать экспертные ответы на все ваши вопросы.</div>
+										</div>
+										<div class="answers">
+										<label>
+											<div class="answer answer__1">
+												<input class="q5inp" type="radio" name="question_5" value="В домашних условиях">
+											</div>
+											<div class="quiz__answer-text">В домашних условиях</div>
+										</label>
+
+										<label>
+											<div class="answer answer__2">
+												<input class="q5inp" type="radio" name="question_5" value="В спорт зале">
+											</div>
+											<div class="quiz__answer-text">В спорт зале</div>
+										</label>
+
+										<label>
+											<div class="answer answer__3">
+												<input class="q5inp" type="radio" name="question_5" value="Комбинировать тренировки дома и в зале">
+											</div>
+											<div class="quiz__answer-text">Комбинировать тренировки дома и в зале</div>
+										</label>
+
+										<label>
+											<div class="answer answer__4">
+												<input class="q5inp" type="radio" name="question_5" value="Есть спорт зал дома">
+											</div>
+											<div class="quiz__answer-text">Есть спорт зал дома</div>
+										</label>
+
+										</div>
+									</div>
+
+									<div class="quizItem quizItem__06">
+										<div class="quizItem__06-body">
+											<h1 class="quizItem__06-title">Отлично! Остался последний шаг!</h1>
+											<p class="quizItem__06-text">Заполните форму, чтобы я мог связаться с вами для консультации по вашим ответам.</p>
+											<p class="quizItem__06-text">А также прислать доступ  к уникальному каталогу фитнес-упражнений.</p>
+										</div>
+
+										<input type="tel" class="quizItem__06-input" placeholder="Введите номер Вашего телефона" pattern="[0-9]+" required>
+										<input type="submit" class="btn quiz__btn__submit" value="Получить консультацию и каталог">
+
+										<div class="privat-block">
+											<label class="privat-block__checkbox-body quiz__privat__checkbox__body checked" >
+													<input class="privat-block__checkbox quiz__privat__checkbox" type="checkbox" checked="checked" >
+											</label>
+											<div class="privat-block__text">Нажимая кнопку вы соглашаетесь с условиями <button class="privat-block__btn">Обработки персональных данных</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="quiz__btn-block">
+									<button class="btn quiz__btn quizBack">Назад</button>
+									<button class="btn quiz__btn quizNext">Далее</button>
+
+								</div>
+							</div>
+						</form>
+
+						<div class="quiz__right">
+							<img src="images/quiz_photo.svg" alt="me" class="quiz__rigth-photo">
+							<div class="quiz__right-label">
+								<div class="quiz__right-name">Алексей Горишный</div>
+								<div class="quiz__right-info">Чемпион мира по фитнесу</div>
+							</div>
+							<div class="quiz__right-text">Отвечайте на вопросы, чтобы я мог точнее понять ваши исходные данные и дать экспертные ответы на все ваши вопросы.</div>
+							<div class="quiz__right-title">В конце получите:</div>
+							<div class="quiz__right-item">Доступ к уникальному каталогу фитнес-упражнений</div>
+							<div class="quiz__right-item">Бесплатную консультацию</div>
+						</div>
+
+						<div class="quiz__preloader">
+							<div class="quiz__preloder-img"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="info-cards">
+				<div class="container">
+					<h1 data-aos="fade-up" class="h1-section">Совсем скоро вы увидите в зеркале тело своей мечты</h1>
+					<h3 data-aos="fade-up" class="h3-section">Ведь для этого уже все готово!</h3>
+					<div class="scroll-icon"></div>
+					<div class="info-cards__body infoCardsBody">
+
+						<div class="info-cards__item info-cards__item-01">
+							<div class="info-cards_number ">01</div>
+							<div class="info-cards__title">Индивидуальный план тренировок</div>
+							<div class="info-cards__text">С учетом ваших целей, уровня подготовки и режима дня. </div>
+						</div>
+
+						<div class="info-cards__item info-cards__item-02">
+							<div class="info-cards_number">02</div>
+							<div class="info-cards__title">Мотивация</div>
+							<div class="info-cards__text">Приеду и за руку отведу в зал, поддержу вашу мотивацию и ответственность на протяжении всего вашего фитнес-путешествия.</div>
+						</div>
+
+						<div class="info-cards__item info-cards__item-03">
+							<div class="info-cards_number">03</div>
+							<div class="info-cards__title">Индивидуальный
+							план питания</div>
+							<div class="info-cards__text">Распишу индивидуальную программу питания для скорейшего достижения результата, опираясь на ваши предпочтения в тех или иных продуктах </div>
+						</div>
+
+						<div class="info-cards__item info-cards__item-04">
+							<div class="info-cards_number">04</div>
+							<div class="info-cards__title">Экспертные инструкции</div>
+							<div class="info-cards__text">Научу правильной технике выполнения упражнений</div>
+						</div>
+
+						<div class="info-cards__item info-cards__item-05">
+							<div class="info-cards_number">05</div>
+							<div class="info-cards__title">Приятная компания</div>
+							<div class="info-cards__text">Тренировки проходят в непринужденной дружеской обстановке</div>
+						</div>
+
+						<div class="info-cards__item info-cards__item-06">
+							<div class="info-cards_number">06</div>
+							<div class="info-cards__title">Комфорт</div>
+							<div class="info-cards__text">Занимаемся в ближайшем удобном для вас зале в удобное для вас время.</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="about-me">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section">Почему вы можете довериться мне?</h2>
+					<h1 data-aos="fade-up" class="h1-section about-me__h1-section">АЛЕКСЕЙ ГОРИШНЫЙ — ЧЕМПИОН МИРА И ЕВРОПЫ ПО ФИТНЕСУ</h1>
+					<div class="scroll-icon"></div>
+					<div class="about-me__320-revers">
+						<div class="about-me__body ">
+							<img src="images/my-photo_01.svg" alt="my-photo_01" class="about-me__photo">
+							<div data-aos="fade-left" class="about-me__info">
+								<ul class="about-me__list">
+									<li class="about-me__list-item">Абсолютный чемпион кубка Мира</li>
+									<li class="about-me__list-item">Абсолютный чемпион кубка Мира по модельному фитнесу, бронзовый призер чемпионата Мира 2011 и 2012 годов.</li>
+									<li class="about-me__list-item">Абсолютный чемпион Европы</li>
+									<li class="about-me__list-item">Абсолютный чемпион Европы по фитнесу в 2012 году.</li>
+									<li class="about-me__list-item">Абсолютный чемпион Украины</li>
+									<li class="about-me__list-item">3-х кратный абсолютный чемпион Украины по фитнесу.</li>
+								</ul>
+								<ul class="about-me__list">
+									<li class="about-me__list-item">Подготовил чемпионов Украины, Европы и Мира: абсолютного чемпиона Украины в категории Mens Model Physique 2012 - Михаила Журавель. Абсолютную чемпионку Украины 2012 и Кубка мира 2012 в номинации бикини - Анну Круковскую</li>
+								</ul>
+								<ul class="about-me__list">
+									<li class="about-me__list-item">70+ статей и передач обо мне в СМИ</li>
+								</ul>
+
+								<div class="about-me__points">
+
+									<div class="about-me__point-item">
+										<div class="about-me__point-icon">
+											<img src="images/check_mark.svg" alt="V">
+										</div>
+										<div class="about-me__point-text">Высшее спортивное образование</div>
+									</div>
+
+									<div class="about-me__point-item">
+										<div class="about-me__point-icon">
+											<img src="images/check_mark.svg" alt="V">
+										</div>
+										<div class="about-me__point-text">17 лет тренерской работы</div>
+									</div>
+
+									<div class="about-me__point-item">
+										<div class="about-me__point-icon">
+											<img src="images/check_mark.svg" alt="V">
+										</div>
+										<div class="about-me__point-text">300+ учеников</div>
+									</div>
+								</div>
+								<button class="btn about-me__btn btnPopup">Получить личную <br>консультацию</button>
+							</div>
+						</div>
+						<div class="about-me__gallery aboutMeGallery">
+							<img src="images/my-photo_01.svg" alt="my-photo_01" class="about-me__gallery-photo about-me__gallery-start">
+							<img src="images/my-photo_02.svg" alt="my-photo_02" class="about-me__gallery-photo">
+							<img src="images/my-photo_03.svg" alt="my-photo_03" class="about-me__gallery-photo">
+							<img src="images/my-photo_04.svg" alt="my-photo_04" class="about-me__gallery-photo">
+							<img src="images/my-photo_05.svg" alt="my-photo_05" class="about-me__gallery-photo">
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="steps">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section steps__h2-section">Как все будет происходить?</h2>
+					<h3 data-aos="fade-up" class="h3-section steps__h3-section">Система из 3 шагов</h3>
+					<div class="scroll-icon"></div>
+					<div class="steps__body stepsBody">
+
+						<div class="steps__item steps__item-01">
+							<div class="steps__number">Шаг 1</div>
+							<div class="steps__item-title">Приезжаю к вам 
+							в любой район</div>
+							<div class="steps__text">
+								<p>Заранее составляем расписание тренировок для формирования системы.</p>
+								<p>Но если вдруг у вас непредвиденные обстоятельства — пойду на встречу и согласую с вами перенос на удобное время.</p>
+							</div>
+						</div>
+
+						<div class="steps__item steps__item-02">
+							<div class="steps__number">Шаг 2</div>
+							<div class="steps__item-title">Эффективная тренировка в
+							зале 1 - 1,5 ч.</div>
+							<div class="steps__text">
+								<p>За это время вы успеваете проработать тело комплексно или отдельную группу мышц.</p>
+								<p>Тренировки со мной — это профессиональный подход к вашему телу и разнообразие.</p>
+							</div>
+						</div>
+
+						<div class="steps__item steps__item-03">
+							<div class="steps__number">Шаг 3</div>
+							<div class="steps__item-title">Фиксируем результаты</div>
+							<div class="steps__text">
+								<p>В подарок каждому ученику: </p>
+								<p>авторские дневники тренировок стоимостью 25$ — БЕСПЛАТНО для поддержания мотивации и отслеживания прогресса</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="student-slider">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section student-slider__h2-section">Вдохновитесь историями моих учеников</h2>
+					<div class="student-slider__body studentSliderBody">
+
+						<div class="slider-item">
+							<img class="student-slider__photo" src="images/student_photo.svg" alt="student-photo">
+							<dib class="student-slider__content">
+								<div class="student-slider__title">Михаил за 9 недель сбросил 12 кг жира.А спустя полгода стал чемпионом Украины в категории Mens Model Physique</div>
+								<div class="student-slider__content-item"><b>Цель: </b>Михаил хотел сбросить лишний вес килограммов 10.</div>
+								<div class="student-slider__content-item"><b>Результат: </b>Сбросил 12 кг жира и набрал отличную форму. Стал победителем Украины в категории Mens Model Physique 2012</div>
+								<div class="student-slider__content-item"><b>Рост: </b>180 см</div>
+								<div class="student-slider__content-item"><b>Возраст: </b>28 лет</div>
+								<div class="student-slider__content-item"><b>Вес до занятий: </b>93 кг</div>
+								<div class="student-slider__content-item"><b>Вес спустя 9 недель: </b>84 кг</div>
+								<div class="student-slider__content-item"><b>Отзыв Михаила: </b>«В тренажерном зале я занимаюсь давно, но раньше это были лишь силовые тренировки. Мне хотелось избавиться от нескольких лишних килограммов. Тренируясь под руководством Алексея и следуя всем его рекомендациям, я не только сбросил вес (с 93 до 84 кг), но и стал чемпионом Украины-2012 по модельному фитнесу».</div>
+								<button class="btn student-slider__btn btnPopup">хочу так же</button>
+							</dib>
+						</div>
+
+						<div class="slider-item">
+							<img class="student-slider__photo" src="images/student_photo.svg" alt="student-photo">
+							<dib class="student-slider__content">
+								<div class="student-slider__title">Михаил за 9 недель сбросил 12 кг жира.А спустя полгода стал чемпионом Украины в категории Mens Model Physique</div>
+								<div class="student-slider__content-item"><b>Цель: </b>Михаил хотел сбросить лишний вес килограммов 10.</div>
+								<div class="student-slider__content-item"><b>Результат: </b>Сбросил 12 кг жира и набрал отличную форму. Стал победителем Украины в категории Mens Model Physique 2012</div>
+								<div class="student-slider__content-item"><b>Рост: </b>180 см</div>
+								<div class="student-slider__content-item"><b>Возраст: </b>28 лет</div>
+								<div class="student-slider__content-item"><b>Вес до занятий: </b>93 кг</div>
+								<div class="student-slider__content-item"><b>Вес спустя 9 недель: </b>84 кг</div>
+								<div class="student-slider__content-item"><b>Отзыв Михаила: </b>«В тренажерном зале я занимаюсь давно, но раньше это были лишь силовые тренировки. Мне хотелось избавиться от нескольких лишних килограммов. Тренируясь под руководством Алексея и следуя всем его рекомендациям, я не только сбросил вес (с 93 до 84 кг), но и стал чемпионом Украины-2012 по модельному фитнесу».</div>
+								<button class="btn student-slider__btn btnPopup">хочу так же</button>
+							</dib>
+						</div>
+
+						<div class="slider-item">
+							<img class="student-slider__photo" src="images/student_photo.svg" alt="student-photo">
+							<dib class="student-slider__content">
+								<div class="student-slider__title">Михаил за 9 недель сбросил 12 кг жира.А спустя полгода стал чемпионом Украины в категории Mens Model Physique</div>
+								<div class="student-slider__content-item"><b>Цель: </b>Михаил хотел сбросить лишний вес килограммов 10.</div>
+								<div class="student-slider__content-item"><b>Результат: </b>Сбросил 12 кг жира и набрал отличную форму. Стал победителем Украины в категории Mens Model Physique 2012</div>
+								<div class="student-slider__content-item"><b>Рост: </b>180 см</div>
+								<div class="student-slider__content-item"><b>Возраст: </b>28 лет</div>
+								<div class="student-slider__content-item"><b>Вес до занятий: </b>93 кг</div>
+								<div class="student-slider__content-item"><b>Вес спустя 9 недель: </b>84 кг</div>
+								<div class="student-slider__content-item"><b>Отзыв Михаила: </b>«В тренажерном зале я занимаюсь давно, но раньше это были лишь силовые тренировки. Мне хотелось избавиться от нескольких лишних килограммов. Тренируясь под руководством Алексея и следуя всем его рекомендациям, я не только сбросил вес (с 93 до 84 кг), но и стал чемпионом Украины-2012 по модельному фитнесу».</div>
+								<button class="btn student-slider__btn btnPopup">хочу так же</button>
+							</dib>
+						</div>
+
+						<div class="slider-item">
+							<img class="student-slider__photo" src="images/student_photo.svg" alt="student-photo">
+							<dib class="student-slider__content">
+								<div class="student-slider__title">Михаил за 9 недель сбросил 12 кг жира.А спустя полгода стал чемпионом Украины в категории Mens Model Physique</div>
+								<div class="student-slider__content-item"><b>Цель: </b>Михаил хотел сбросить лишний вес килограммов 10.</div>
+								<div class="student-slider__content-item"><b>Результат: </b>Сбросил 12 кг жира и набрал отличную форму. Стал победителем Украины в категории Mens Model Physique 2012</div>
+								<div class="student-slider__content-item"><b>Рост: </b>180 см</div>
+								<div class="student-slider__content-item"><b>Возраст: </b>28 лет</div>
+								<div class="student-slider__content-item"><b>Вес до занятий: </b>93 кг</div>
+								<div class="student-slider__content-item"><b>Вес спустя 9 недель: </b>84 кг</div>
+								<div class="student-slider__content-item"><b>Отзыв Михаила: </b>«В тренажерном зале я занимаюсь давно, но раньше это были лишь силовые тренировки. Мне хотелось избавиться от нескольких лишних килограммов. Тренируясь под руководством Алексея и следуя всем его рекомендациям, я не только сбросил вес (с 93 до 84 кг), но и стал чемпионом Украины-2012 по модельному фитнесу».</div>
+								<button class="btn student-slider__btn btnPopup">хочу так же</button>
+							</dib>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="video">
+				<div class="container">
+					<h2 class="h2-section video__h2-section">Видео о главном</h2>
+					<iframe width="1280" height="720" src="https://www.youtube.com/embed/Q75KDFWxzXw?list=PL-Cwh6ti9PF-qjifg7YGfGtgc4hHlTLPk" title="Рельефное тело за 12 недель с Горишным Алексеем" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+
+			</section>
+
+			<section class="tariff">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section tariff__h2-section">Выбирайте тариф</h2>
+					<h3 data-aos="fade-up" class="h3-section tariff__h3-section">и уже сегодня начнем движение к вашей цели</h3>
+					<div class="scroll-icon"></div>
+					<div class="tariff__body tariffBody">
+						<div class="tariff__item">
+							<div class="tariff__label">Тариф</div>
+							<div class="tariff__title">Знакомство</div>
+							<div class="tariff__quantity">3 тренировки</div>
+							<div class="tariff__text">Индивидуальная программа тренировок Индивидуальная программа питания Поддержка по всем вопросам Эксклюзивный дневник тренировок</div>
+							<div class="tariff__price">600$</div>
+							<button class="btn tariff_btn btnPopup">оставить заявку</button>
+							<div class="tariff__bonus">В подарок: Доступ к Авторскому каталогу фитнес упражнений</div>
+						</div>
+
+						<div class="tariff__item">
+							<div class="tariff__label">Тариф</div>
+							<div class="tariff__title">Продвинутый</div>
+							<div class="tariff__quantity">12 тренировок </div>
+							<div class="tariff__text">Индивидуальная программа тренировок Индивидуальная программа питания Поддержка по всем вопросам Эксклюзивный дневник тренировок</div>
+							<div class="tariff__price">1 800$</div>
+							<button class="btn tariff_btn btnPopup">оставить заявку</button>
+							<div class="tariff__bonus">В подарок: Доступ к Авторскому каталогу фитнес упражнений</div>
+						</div>
+
+						<div class="tariff__item">
+							<div class="tariff__label">Тариф</div>
+							<div class="tariff__title">Прокаченный</div>
+							<div class="tariff__quantity">24 тренировок</div>
+							<div class="tariff__text">Индивидуальная программа тренировок Индивидуальная программа питания Поддержка по всем вопросам Эксклюзивный дневник тренировок</div>
+							<div class="tariff__price">3 000$</div>
+							<button class="btn tariff_btn btnPopup">оставить заявку</button>
+							<div class="tariff__bonus">В подарок: Доступ к Авторскому каталогу фитнес упражнений</div>
+						</div>
+
+						<div class="tariff__item">
+							<div class="tariff__label">Тариф</div>
+							<div class="tariff__title">Неограниченный 30 дней</div>
+							<div class="tariff__quantity">Безлимит тренировок</div>
+							<div class="tariff__text tariff__text-max">Сопровождение 24/7 Индивидуальная программа тренировок Индивидуальная программа питания Контроль и корректировка каждого приема пищи Эксклюзивный 							дневник тренировок</div>
+							<div class="tariff__price">6 000$</div>
+							<button class="btn tariff_btn btnPopup">оставить заявку</button>
+							<div class="tariff__bonus">В подарок: Доступ к Авторскому каталогу фитнес упражнений</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="questions">
+				<div class="container">
+					<h2 data-aos="fade-up" class="h2-section questions__h2-section">Знаю, что вас волнует перед началом тренировок</h2>
+					<h3 data-aos="fade-up" class="h3-section questions__h3-section">Меня часто спрашивают — с радостью отвечаю</h3>
+					<div class="questions__body">
+						<div class="questions__item">
+							<div class="questions__title">Какую диету или рекомендации по питанию вы даете клиентам?</div>
+							<div class="questions__text">Я прорабатваю сбалансированный план питания, который необходим для общего состояния здоровья и благополучия. План включает  разнообразные продукты, в том числе нежирный белок, цельнозерновые продукты, фрукты и овощи. Также определяю  правильный размер порций и учу методам контроля потребления пищи.</div>
+						</div>
+
+						<div class="questions__item">
+							<div class="questions__title">Меня часто спрашивают — с радостью отвечаю</div>
+							<div class="questions__text">Я прорабатваю сбалансированный план питания, который необходим для общего состояния здоровья и благополучия. План включает  разнообразные продукты, в том числе нежирный белок, цельнозерновые продукты, фрукты и овощи. Также определяю  правильный размер порций и учу методам контроля потребления пищи.</div>
+						</div>
+
+						<div class="questions__item">
+							<div class="questions__title">Меня часто спрашивают — с радостью отвечаю</div>
+							<div class="questions__text">Я прорабатваю сбалансированный план питания, который необходим для общего состояния здоровья и благополучия. План включает  разнообразные продукты, в том числе нежирный белок, цельнозерновые продукты, фрукты и овощи. Также определяю  правильный размер порций и учу методам контроля потребления пищи.</div>
+						</div>
+
+						<div class="questions__item">
+							<div class="questions__title">Меня часто спрашивают — с радостью отвечаю</div>
+							<div class="questions__text">Я прорабатваю сбалансированный план питания, который необходим для общего состояния здоровья и благополучия. План включает  разнообразные продукты, в том числе нежирный белок, цельнозерновые продукты, фрукты и овощи. Также определяю  правильный размер порций и учу методам контроля потребления пищи.</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<h2 class="h2-section footer__h2-section">Звоните с 10:00 до 24:00. Консультация бесплатна и ни к чему вас не обязывает</h2>
+				<div class="footer__contacts">
+					<a href="tel:17542099907" class="footer__phone">+1 (754) 209 - 9907
+					</a>
+					<a href="#" class="footer__viber">
+						<img src="images/footer_viber.svg" alt="viber">
+					</a>
+					<a href="#" class="footer__whatsapp">
+						<img src="images/footer_whatsapp.svg" alt="whatsapp">
+					</a>
+				</div>
+				<div class="footer__text">или оставляйте заявку. Я свяжусь с вами, расскажу, как получить от меня тренировку в подарок и отвечу на все вопросы.</div>
+				<button class="btn footer__btn btnPopup">Получить консультацию Чемпиона</button>
+				<div class="footer__copyright-block">
+					<p class="footer__copyright-text">Все права защищены Copyright © 2006 - 2023</p>
+					<button class="footer__privat-btn">Политика конфиденциальности</button>
+					<div class="paradigma-link">
+						Сделано с  любовью в <a href="https://github.com/Lekade">lekade.website</a> 
+					</div>
+				</div>
+			</div>
+			<div class="popup-wrapper disabled">
+				<div class="popup-block_01 disabled">
+					<div class="popup-exit01">X
+					</div>
+					<form>
+						<div class="popup-body">
+							<div class="popup-title">Получите  бесплатную консультацию 
+							чемпиона Алексея Горишного</div>
+							<div class="popup-subtitle">Свяжусь с вами в течение  дня</div>
+							<input type="tel" class="popup-input" placeholder="Введите Ваш номер телефона">
+							<input type="submit" class="btn popup-submite popupSubmiteOne">
+
+							<div class="privat-block">
+								<label class="privat-block__checkbox-body popupCheckboxBodyOne checked" >
+								<input class="privat-block__checkbox popupOne" type="checkbox" checked="checked" >
+								</label>
+								<div class="privat-block__text">Нажимая кнопку вы соглашаетесь с условиями <button class="privat-block__btn">Обработки персональных данных</button></div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="popupExit-block disabled">
+					<div class="popup-exit02">X
+					</div>
+					<form>
+						<div class="popup-body">
+							<div class="popup-title">Не могу отпустить вас с пустыми руками!</div>
+							<div class="popup-subtitle">Получите бесплатно инструкцию</div>
+							<div class="popup-title">“Как выбрать персонального тренера: ТОП-10 вопросов”</div>
+							<input type="tel" class="popup-input" placeholder="Введите Ваш номер телефона">
+
+							<div class="popup-select opt1">
+								<div class="popup-select__options">
+
+									<label class="popup-option checked labelOptionP1">
+									whats app
+										<input type="radio" name="option" value="whats app" class="optionP1">
+									</label>
+
+									<label class="popup-option labelOptionP2">
+										viber
+										<input type="radio" name="option" value="whats app" class="optionP2">
+									</label>
+								</div>
+							</div>
+
+
+							<input type="submit" class="btn popup-submite popupSubmitetwo" value="Получить бесплатно">
+
+
+
+							<div class="privat-block">
+								<label class="privat-block__checkbox-body popupCheckboxBodyTwo checked" >
+								<input class="privat-block__checkbox popuptwo" type="checkbox" checked="checked" >
+								</label>
+								<div class="privat-block__text">Нажимая кнопку вы соглашаетесь с условиями <button class="privat-block__btn">Обработки персональных данных</button></div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+			<div class="sidebar">
+            <div class="sidebar__btn sidebar__top-btn"></div>
+            <div class="sidebar__container">
+                <div  class="sidebar__item sidebar__item01">
+                </div>
+                <div class="sidebar__item sidebar__item02">
+                </div>
+                <div class="sidebar__item sidebar__item03 btnPopup">
+                </div>
+            </div>
+            <div class="sidebar__btn sidebar__bottom-btn">
+            </div>
+        </div>
+
+        <div class="to_up"></div>
+
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+</html>
