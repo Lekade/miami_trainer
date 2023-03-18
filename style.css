@@ -2482,7 +2482,7 @@ html{
  .wrapper .infoCardsBody .slick-arrow.slick-next{
 	position: absolute;
 	bottom: 12.5rem;
-	right: 0;
+	right: 5.5rem;
 	transform: rotate(180deg);
 }
 
@@ -2907,7 +2907,7 @@ html{
 	}
 	.tariff__h3-section {
 		margin-top: 0;
-		margin-bottom: 3.1;
+		margin-bottom: 3.1rem;
 		font-weight: 400;
 		font-size: 1.4rem;
 		line-height: 1.7rem;
@@ -2940,7 +2940,7 @@ html{
     overflow: hidden;
 	}
 .tariff  .slick-dots {
-    bottom: -1.8rem;
+    bottom: -2.8rem;
 }
 
 /* Стрелка влево */
