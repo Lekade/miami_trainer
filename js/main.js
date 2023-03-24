@@ -427,7 +427,6 @@ popupWrapper.addEventListener('click', e => {
 		popupExitBlock.classList.add('disabled');
 		popupBlock01.classList.add('disabled');
 	}
-
 })
 
 
@@ -482,16 +481,26 @@ toUp.addEventListener('click', e =>{
 	scrollTo(header)
 })
 
-const inputTel = document.querySelector('.input__tel')
 
-const maskOptions = {
-	mask: '+1 (0 0 0) 0 0 0 - 0 0 - 0 0',
-	lazy:false
-}
+const inputTel = document.querySelectorAll('input[type="tel"]')
 
-const mask = new IMask(inputTel, maskOptions);
+	for(let i = 0; i < inputTel.length; i++){
+		let inT = new IMask(inputTel[i], {
+			mask: '+{1} (0 0 0) 0 0 0 - 0 0 - 0 0',
+			lazy: true
+		})
+	}
 
 
+/*
+inputTel.addEventListener('input', e => {
+	if(mask.masked.isComplete){
+
+	} else {
+
+	}
+})
+*/
 
 
 
