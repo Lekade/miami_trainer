@@ -27,7 +27,6 @@ html{
 }
 
 
-
 .wrapper{
 	position: relative;
 	width:100%;
@@ -142,8 +141,8 @@ html{
 	width: 100%;
 	height: 108rem;
 	padding-top: 20.9rem;
-	background-image: url(images/intro_bg.svg);
-	background-repeat: no-repeat;
+	background-image: url(images/intro_bg.jpg);
+	background-repeat: repeat;
 	background-position: 100% 100%;
 	background-size: 192rem 108rem;
 }
@@ -445,19 +444,19 @@ html{
 }
 
 .quizItem__02 .answer__1{
-		background-image: url(images/q2inp1.svg);
+		background-image: url(images/q2inp1.jpg);
 }
 .quizItem__02 .answer__2{
-		background-image: url(images/q2inp2.svg);
+		background-image: url(images/q2inp2.jpg);
 }
 .quizItem__02 .answer__3{
-		background-image: url(images/q2inp3.svg);
+		background-image: url(images/q2inp3.jpg);
 }
 .quizItem__02 .answer__4{
-		background-image: url(images/q2inp4.svg);
+		background-image: url(images/q2inp4.jpg);
 }
 .quizItem__02 .answer__5{
-	background-image: url(images/q2inp5.svg);
+		background-image: url(images/q2inp5.jpg);
 }
 
 .quizItem__03 .answer__1{
@@ -483,23 +482,23 @@ html{
 		background-image: url(images/q4inp3.svg);
 }
 .quizItem__04 .answer__4{
-		background-image: url(images/q4inp4.svg);
+		background-image: url(images/q4inp4.jpg);
 }
 .quizItem__04 .answer__5{
 		background-image: url(images/q4inp5.svg);
 }
 
 .quizItem__05 .answer__1{
-		background-image: url(images/q5inp1.svg);
+		background-image: url(images/q5inp1.jpg);
 }
 .quizItem__05 .answer__2{
-		background-image: url(images/q5inp2.svg);
+		background-image: url(images/q5inp2.jpg);
 }
 .quizItem__05 .answer__3{
-		background-image: url(images/q5inp3.svg);
+		background-image: url(images/q5inp3.jpg);
 }
 .quizItem__05 .answer__4{
-		background-image: url(images/q5inp4.svg);
+		background-image: url(images/q5inp4.jpg);
 }
 
 
@@ -761,12 +760,12 @@ html{
 	letter-spacing: 0.04em;
 	color: #FFFFFF;
 
-	background-image: url(images/quiz_bg_1.svg);
+	background-image: url(images/quiz_bg_1.png);
 	padding: 1.7rem 5.6rem 1.7rem 3.9rem;
 }
 
 .quiz__right-item:last-child {
-	background-image: url(images/quiz_bg_2.svg);
+	background-image: url(images/quiz_bg_2.png);
 	padding: 2.8rem 11.2rem 3.2rem 3.9rem;
 }
 
@@ -816,7 +815,7 @@ html{
 .quiz__body.transform .quiz__form{
 	width: 157rem;
 	margin-right: 0;
-	background: url(images/quiz_submite_bg2.svg), url(images/quiz_submite_bg.svg) #F9F9F9;
+	background: url(images/quiz_submite_bg2.svg), url(images/quiz_submite_bg.png) #F9F9F9;
 	background-repeat: no-repeat;
 	background-position: left 45.5rem bottom 9.9rem, bottom right;
 	background-size: 14.3rem 11.3rem, 58.2rem 81.6rem;
@@ -871,30 +870,20 @@ html{
 	width: 47rem;
 	height: 61rem;
 	border-radius: 2.5rem;
-	background-repeat: no-repeat;
+	background-image: url(images/1x1.png);
+	background-repeat: repeat;
 	background-position: 100% 100%;
 	background-size: 47rem 61rem;
-}
+	background-color: #C8C8C8;
 
-.info-cards__item-01 {
-	background-image: url(images/info-card_01.svg);
 }
 .info-cards__item-02 {
-	background-image: url(images/info-card_02.svg);
 	color: #fff;
 }
-.info-cards__item-03 {
-	background-image: url(images/info-card_03.svg);
-}
 .info-cards__item-04 {
-	background-image: url(images/info-card_04.svg);
 		color: #fff;
 }
-.info-cards__item-05 {
-	background-image: url(images/info-card_05.svg);
-}
 .info-cards__item-06 {
-	background-image: url(images/info-card_06.svg);
 	color: #fff;
 }
 
@@ -962,6 +951,8 @@ html{
 	width: 53.7rem;
 	height: 71.6rem;
 	margin-right: 6.1rem;
+	background: #C8C8C8;
+	border-radius: 2.5rem;
 }
 
 .about-me__list {
@@ -1059,15 +1050,17 @@ html{
 	width: 37rem;
 	height: 40rem;
 	border-radius: 2.5rem;
+	background: #C8C8C8;
 }
 
 .steps {
 	width: 192rem;
 	height: 95rem;
-	background-image: url(images/steps_bg.svg);
-	background-repeat: no-repeat;
+	background-image: url(images/1x1.png);
+	background-repeat: repeat;
 	background-position: 100% 100%;
 	background-size: 192rem 95rem;
+	background-color: #C8C8C8;
 
 }
 .steps__h2-section {
@@ -1174,6 +1167,7 @@ html{
 	width: 65.5rem;
 	height: 62.7rem;
 	border-radius: 2.5rem;
+	background: #C8C8C8;
 }
 
 .student-slider__title {
@@ -1369,11 +1363,12 @@ html{
 .tariff {
 	width: 100%;
 	height: 92.4rem;
-	background-image: url(images/tariff_bg.svg);
-	background-repeat: no-repeat;
+	background-image: url(images/1x1.png);
+	background-repeat: repeat;
 	background-position: 100% 100%;
 	background-size: 192rem 92.4rem;
 	color: #fff;
+	background-color: #C8C8C8;
 }
 .tariff__h2-section {
 	color: #fff;
@@ -1609,10 +1604,10 @@ html{
 	position: relative;
 	width: 71rem;
 	height: 50rem;
-	background-image: url(images/popup_bg_1.svg);
+	background-image: url(images/tariff_bg.jpg);
 	background-repeat: no-repeat;
-	background-position: 100% 100%;
-	background-size: 71rem 50rem;
+	background-position: center;
+	background-size: cover;
 	border-radius: 2.5rem;
 	background-color:#BFBFBF;
 	color: #fff;
@@ -1680,7 +1675,7 @@ html{
 	padding: 5rem;
 	width: 108rem;
 	height: 71rem;
-	background-image: url(images/popup_bg_2.svg);
+	background-image: url(images/popup_bg_2.jpg);
 	background-color: #606060;
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
@@ -2106,7 +2101,7 @@ html{
 	.intro {
 		padding-top: 11.2rem;
 		height: 106.1rem;
-		background-image: url(images/intro_bg_320.svg);
+		background-image: url(images/intro_bg_320.jpg);
 		background-size: 32rem 106.1rem;
 	}
 	.intro__body {
