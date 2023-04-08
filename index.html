@@ -15,8 +15,8 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<a href="" class="header__logo">
-					<img class="header__logo-img" data-src="images/logo.svg" src="images/loading.svg" alt="" >
+				<a href="index.html" class="header__logo">
+					<img class="header__logo-img" src="images/logo.svg" alt="logo" >
 				</a>
 				<div class="header__info">
 					<a href="#" target="_blank" class="header__whatsapp">
@@ -96,14 +96,14 @@
 										<div class="answers">
 										<label>
 											<div class="answer answer__1">
-												<input class="q2inp" type="checkbox" name="question_2" value="Хочу похудеть">
+												<input class="q2inp" type="checkbox" name="question_2[]" value="Хочу похудеть">
 											</div>
 											<div class="quiz__answer-text">Хочу похудеть</div>
 										</label>
 
 										<label>
 											<div class="answer answer__2">
-												<input class="q2inp" type="checkbox" name="question_2" value="Хочу набртаь мышечную массу">
+												<input class="q2inp" type="checkbox" name="question_2[]" value="Хочу набртаь мышечную массу">
 											</div>
 											<div class="quiz__answer-text">Хочу набртаь мышечную массу
 											</div>
@@ -111,21 +111,21 @@
 
 										<label>
 											<div class="answer answer__3">
-												<input class="q2inp" type="checkbox" name="question_2" value="Хочу поддерживать общую физическую форму и здоровье">
+												<input class="q2inp" type="checkbox" name="question_2[]" value="Хочу поддерживать общую физическую форму и здоровье">
 											</div>
 											<div class="quiz__answer-text">Хочу поддерживать общую физическую форму и здоровье</div>
 										</label>
 
 										<label>
 											<div class="answer answer__4">
-												<input class="q2inp" type="checkbox" name="question_2" value="Развить определенные группы мышц">
+												<input class="q2inp" type="checkbox" name="question_2[]" value="Развить определенные группы мышц">
 											</div>
 											<div class="quiz__answer-text">Развить определенные группы мышц</div>
 										</label>
 
 										<label>
 											<div class="answer answer__5">
-												<input class="q2inp" type="checkbox" name="question_2" value="Другие цели">
+												<input class="q2inp" type="checkbox" name="question_2[]" value="Другие цели">
 											</div>
 											<div class="quiz__answer-text">Другие цели</div>
 										</label>
@@ -263,7 +263,10 @@
 											<p class="quizItem__06-text">А также прислать доступ  к уникальному каталогу фитнес-упражнений.</p>
 										</div>
 
-										<input type="tel" class="quizItem__06-input" placeholder="Введите номер Вашего телефона" pattern="[0-9]+" required>
+										<label class="label__input">
+											<input name="phone" type="tel" class="quizItem__06-input _req _phone" placeholder="Введите Ваш номер телефона" required>
+											<span class="error__info">Заполните обязательное поле</span>
+										</label>
 										<input type="submit" class="btn quiz__btn__submit" value="Получить консультацию и каталог">
 
 										<div class="privat-block">
@@ -402,11 +405,11 @@
 							</div>
 						</div>
 						<div class="about-me__gallery aboutMeGallery">
-							<img data-src="images/my-photo_01.jpg" src="images/loading.svg" alt="my-photo_01" class="about-me__gallery-photo about-me__gallery-start">
-							<img data-src="images/my-photo_02.jpg" src="images/loading.svg" alt="my-photo_02" class="about-me__gallery-photo">
-							<img data-src="images/my-photo_03.jpg" src="images/loading.svg" alt="my-photo_03" class="about-me__gallery-photo">
-							<img data-src="images/my-photo_04.jpg" src="images/loading.svg" alt="my-photo_04" class="about-me__gallery-photo">
-							<img data-src="images/my-photo_05.jpg" src="images/loading.svg" alt="my-photo_05" class="about-me__gallery-photo">
+							<img src="images/my-photo_01.jpg" alt="my-photo_01" class="about-me__gallery-photo about-me__gallery-start">
+							<img src="images/my-photo_02.jpg" alt="my-photo_02" class="about-me__gallery-photo">
+							<img src="images/my-photo_03.jpg" alt="my-photo_03" class="about-me__gallery-photo">
+							<img src="images/my-photo_04.jpg" alt="my-photo_04" class="about-me__gallery-photo">
+							<img src="images/my-photo_05.jpg" alt="my-photo_05" class="about-me__gallery-photo">
 						</div>
 					</div>
 
@@ -639,8 +642,12 @@
 							<div class="popup-title">Получите  бесплатную консультацию 
 							чемпиона Алексея Горишного</div>
 							<div class="popup-subtitle">Свяжусь с вами в течение  дня</div>
-							<input type="tel" class="popup-input" placeholder="Введите Ваш номер телефона">
-							<input type="submit" class="btn popup-submite popupSubmiteOne">
+							<label class="label__input">
+								<input name="phone" type="tel" class="popup-input _req _phone" placeholder="Введите Ваш номер телефона" required>
+								<span class="error__info">Заполните обязательное поле</span>
+							</label>
+
+							<button  class="btn popup-submite popupSubmiteOne">Отправить</button>
 
 							<div class="privat-block">
 								<label class="privat-block__checkbox-body popupCheckboxBodyOne checked" >
@@ -659,19 +666,21 @@
 							<div class="popup-title">Не могу отпустить вас с пустыми руками!</div>
 							<div class="popup-subtitle">Получите бесплатно инструкцию</div>
 							<div class="popup-title">“Как выбрать персонального тренера: ТОП-10 вопросов”</div>
-							<input type="tel" class="popup-input" placeholder="Введите Ваш номер телефона">
-
+							<label class="label__input">
+								<input name="phone" type="tel" class="popup-input _req _phone" placeholder="Введите Ваш номер телефона"required>
+								<span class="error__info" >Заполните обязательное поле</span>
+							</label>
 							<div class="popup-select opt1">
 								<div class="popup-select__options">
 
 									<label class="popup-option checked labelOptionP1">
 									whats app
-										<input type="radio" name="option" value="whats app" class="optionP1">
+										<input type="radio" name="messenger" value="whats app" class="optionP1" checked="true">
 									</label>
 
 									<label class="popup-option labelOptionP2">
 										viber
-										<input type="radio" name="option" value="whats app" class="optionP2">
+										<input type="radio" name="messenger" value="viber" class="optionP2">
 									</label>
 								</div>
 							</div>

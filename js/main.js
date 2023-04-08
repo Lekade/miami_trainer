@@ -1,6 +1,6 @@
 AOS.init({
 	// Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
   initClassName: 'aos-init', // class applied after initialization
   animatedClassName: 'aos-animate', // class applied on animation
@@ -332,16 +332,23 @@ const popupBlock01 = document.querySelector(".popup-block_01")
 const popupExit01 = document.querySelector(".popup-exit01")
 const btnColection = document.querySelectorAll(".btnPopup")
 
+let popupNum = 0
+
 btnColection.forEach(function(btn) {
   btn.addEventListener('click', function(e) {
-		popupWrapper.classList.remove('disabled')
-		popupBlock01.classList.remove('disabled')
+  	if(popupNum == 0){
+			popupWrapper.classList.remove('disabled')
+			popupBlock01.classList.remove('disabled')
+			popupNum = 1
+  	}
+
   })
 })
 
 popupExit01.addEventListener('click', e =>{
 	popupWrapper.classList.add('disabled');
 	popupBlock01.classList.add('disabled');
+	popupNum = 0
 	}
 )
 
@@ -406,6 +413,7 @@ optionP2.addEventListener('click', e =>{
 popupExit02.addEventListener('click', e => {
 	popupWrapper.classList.add('disabled');
 	popupExitBlock.classList.add('disabled');
+	popupNum = 0
 })
 
 
@@ -426,6 +434,7 @@ popupWrapper.addEventListener('click', e => {
 		popupWrapper.classList.add('disabled')
 		popupExitBlock.classList.add('disabled');
 		popupBlock01.classList.add('disabled');
+		popupNum = 0
 	}
 })
 
@@ -435,9 +444,13 @@ let numPopupExit = 0
 	setTimeout(() => {
 	document.addEventListener('wheel', (e)=>{
 		if(e.deltaY < 0 && numPopupExit == 0 && window.screen.width > 768){
-			popupWrapper.classList.remove('disabled');
-			popupExitBlock.classList.remove('disabled');
-			numPopupExit++
+			if(popupNum == 0){
+				popupWrapper.classList.remove('disabled');
+				popupExitBlock.classList.remove('disabled');
+				numPopupExit++
+				popupNum = 2
+			}
+
 		}
 	})},5000);
 
@@ -502,14 +515,13 @@ inputTel.addEventListener('input', e => {
 	}
 })
 */
-
+/*----------------------------------lazy Scroll---------------------------------------*/
 
 const lazyImages = document.querySelectorAll('img[data-src],source[data-srcset],section[data-bg],div[data-bg]');
-const loadMapBlick = document.querySelector('._Load-map');
 const windowHeight = document.documentElement.clientHeight;
 
+
 let lazyImagesPositions = [];
-console.log(lazyImagesPositions)
 
 if(lazyImages.length > 0){
 	lazyImages.forEach(img => {
@@ -520,6 +532,7 @@ if(lazyImages.length > 0){
 	});
 }
 
+
 window.addEventListener('scroll', lazyScroll);
 
 function lazyScroll (){
@@ -528,10 +541,30 @@ function lazyScroll (){
 	}
 }
 
-console.log(pageYOffset)
-
 function lazyScrollCheck (){
 	let imgIndex = lazyImagesPositions.findIndex(item => pageYOffset > item - windowHeight);
+
+	if(window.innerWidth < 769 ){
+		for(let i = 0; i < lazyImagesPositions.length; i++){
+			imgIndex = i
+
+				if(imgIndex >= 0){
+		if(lazyImages[imgIndex].dataset.src){
+			lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+			lazyImages[imgIndex].removeAttribute('data-src');
+		}else if(lazyImages[imgIndex].dataset.srcset){
+			lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.srcset;
+			lazyImages[imgIndex].removeAttribute('data-srcset');
+		}else if(lazyImages[imgIndex].dataset.bg){
+			lazyImages[imgIndex].style.backgroundImage = ` url(${lazyImages[imgIndex].dataset.bg})`
+			lazyImages[imgIndex].style.backgroundRepeat = 'no-repeat';
+			lazyImages[imgIndex].removeAttribute('data-srcset');
+		}
+		delete lazyImagesPositions[imgIndex];
+	}
+		}
+}
+
 	if(imgIndex >= 0){
 		if(lazyImages[imgIndex].dataset.src){
 			lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
@@ -549,4 +582,120 @@ function lazyScrollCheck (){
 }
 
 
+/*------------------------------forms--------------------------------------------*/
+
+
+let formAll = document.querySelectorAll('form');
+
+
+formAll.forEach( form => {
+
+	form.addEventListener('submit', async e =>{
+			e.preventDefault();
+
+
+			let error = formValidate(form)
+
+			if(error === 0){
+				form.classList.add('_sending')
+				let response = await fetch('../sendmail.php', {
+					method: 'POST',
+					body: new FormData(form)
+			})
+
+			if(response.ok){
+					form.classList.remove('_sending')
+					window.location.href = 'thanks.html'
+					form.reset();
+				}else{
+
+				}
+			}
+	})
+})
+
+
+function formValidate(form){
+	let formReq = form.querySelectorAll('._req');
+	let error = 0;
+
+	for (let i = 0; i < formReq.length; i++){
+		const input = formReq[i];
+		formRemoveError(input)
+
+		input.oninput = e => {
+			formValidate(form)
+		}
+
+		if(input.classList.contains('_email')){
+			if(emailTesst(input)){
+				formAddError(input);
+				error++;
+			}
+		}else if(input.getAttribute('type') === 'checkbox' && input.checked === false){
+			formAddError(input);
+			error++;
+		}
+		else if(input.classList.contains('_phone') && input.value.length < 28){
+			formAddError(input);
+			error++;
+		}
+		else{
+			if(input.value === ''){
+			formAddError(input);
+			error++;
+			}
+		}
+	}
+	return error
+}
+
+function formAddError(input) {
+	input.parentElement.classList.add('_error');
+	input.classList.add('_error');
+}
+function formRemoveError(input) {
+	input.parentElement.classList.remove('_error');
+	input.classList.remove('_error');
+}
+
+function emailTesst(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+
+
+
+
+
+
+
+
+/*
+
+let formAll = document.forms
+
+formAll.forEach(form => {
+    form.onsubmit = async (e) => {
+        e.preventDefault();
+
+        let error = formValidate(form);
+
+        if(error === 0){
+            let response = await fetch('../sendmail.php', {
+                method: 'POST',
+                body: new FormData(form)
+            })
+
+            if(response.ok){
+                window.location.href = 'thanks.html'
+                form.reset();
+            } else {
+                alert('Ошибка')
+        }
+        }
+    }
+})
+
+*/
 

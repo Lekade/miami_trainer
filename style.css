@@ -563,8 +563,7 @@ html{
 	letter-spacing: 0.02em;
 }
 .quizItem__06-input {
-	margin-top: 7.5rem;
-	margin-bottom: 1.806rem;
+	margin-top: 4.5rem;
 	padding: 1.4rem 2rem 1.3rem;
 	width: 51.1rem;
 	height: 8rem;
@@ -579,6 +578,9 @@ html{
 
 .quizItem__06-input::placeholder{
 	color: #BDBDBD;
+}
+.quizItem__06-input._error{
+	box-shadow: 0 0 0.5rem #FF645F;
 }
 .quiz__btn__submit {
 	margin-bottom: 1.794rem;
@@ -1645,7 +1647,6 @@ html{
 	border-radius: 2rem;
 }
 .popup-block_01 .popup-input {
-	margin-bottom: 1.8rem;
 	width: 51.1rem;
 	height: 8rem;
 	padding: 2.2rem 2.1rem 2.3rem 3.2rem;
@@ -1667,8 +1668,57 @@ html{
 	border-radius: 2rem;
 }
 
+.popup-input._error{
+	box-shadow: 0 0 0.5rem #FF645F;
+}
+
+
+.label__input {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 1.8rem;
+}
+
+
+label .error__info{
+	padding-left: 1rem;
+	display: block;
+	width: 100%;
+	font-size: 1.5rem;
+	color: transparent;
+
+}
+
+label._error .error__info{
+	color: #FF645F;
+}
+
 /*------------------------------------------*/
 
+form{
+
+}
+
+form:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9) url(images/loading.svg) center /10rem no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+	z-index: 1000000000;
+}
+
+
+form._sending:after{
+	opacity: 1;
+	visibility: visible;
+}
 
 .popupExit-block {
 	position: relative;
@@ -1723,7 +1773,6 @@ html{
 }
 
 .popupExit-block .popup-input {
-	margin-bottom: 1.8rem;
 	padding: 2rem 2.2rem 2rem 2.444rem;
 	display: block;
 	width: 39rem;
@@ -2104,6 +2153,11 @@ html{
 		background-image: url(images/intro_bg_320.jpg);
 		background-size: 32rem 106.1rem;
 	}
+
+	.intro.thenks_320{
+		height: 77.1rem;
+	}
+
 	.intro__body {
 		width: 100%;
 	}
@@ -2257,7 +2311,8 @@ html{
 	width: 37.6rem;
 	height: 88rem;
 	margin-right: 0;
-	background-size: 0 0, 43.2rem 47.6rem;
+	background-position: left 45.5rem bottom 9.9rem, bottom right 4rem;
+	background-size: 0 0, 35.2rem 48.6rem;
 }
 
 	.quizItem__06 {
@@ -2283,7 +2338,6 @@ html{
 	}
 	.quizItem__06-input {
     margin-top: 2.5rem;
-    margin-bottom: 3.8rem;
     padding: 1.4rem 2rem 1.3rem;
     width: 27.6rem;
     height: 6rem;
@@ -2295,6 +2349,7 @@ html{
     letter-spacing: 0.03em;
     outline: none;
 }
+
 	.quiz__btn__submit {
 		width: 27.6rem;
 		height: 6rem;
@@ -2498,12 +2553,12 @@ html{
 /* Dots */
  .wrapper .slick-dotted.slick-slider
 {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
  .wrapper .slick-dots {
     position: absolute;
-    bottom: -2.8rem;
+    bottom: -2.3rem;
     display: block;
     width: 100%;
     padding: 0;
@@ -3139,7 +3194,6 @@ html{
 	border-radius: 2rem;
 }
 .popup-block_01 .popup-input {
-	margin-bottom: 1.8rem;
 	width: 100%;
 	height: 6rem;
 	padding: 2.2rem 2.1rem 2.3rem 2.2rem;
